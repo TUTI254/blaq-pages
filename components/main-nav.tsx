@@ -16,7 +16,6 @@ import {
 
 const MainNav = () => {
   const pathname = usePathname();
-  // map the links from the NavLinks array
   const routes = NavLinks.map((route) => ({
     href: route.href,
     label: route.label,
@@ -30,7 +29,7 @@ const MainNav = () => {
           key={route.href}
           href={route.href}
           className={cn(
-            "hidden lg:block md:block text-sm text-white font-bold uppercase transition-colors hover:text-nav",
+            "hidden lg:block md:block text-lg text-white  uppercase transition-colors hover:text-nav",
             route.active ? "text-nav" : "text-white"
           )}
         >
@@ -42,7 +41,7 @@ const MainNav = () => {
         <SheetTrigger asChild>
           <AlignJustify className="text-white w-6 h-6 block lg:hidden md:hidden " />
         </SheetTrigger>
-        <SheetContent className="bg-menu" side="top">
+        <SheetContent className="bg-menu h-auto" side="top">
           <SheetHeader>
             <SheetTitle className="text-left text-xs text-slate-50">
               Menu
@@ -56,8 +55,10 @@ const MainNav = () => {
                 key={route.href}
                 href={route.href}
                 className={cn(
-                  "text-lg text-white font-bold uppercase transition-colors hover:underline ",
-                  route.active ? "underline" : ""
+                  "text-lg text-white uppercase transition-colors hover:underline hover:decoration-black hover:underline-offset-2 ",
+                  route.active
+                    ? "underline underline-offset-2 decoration-black"
+                    : ""
                 )}
               >
                 {route.label}
