@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import "./globals.css";
 import type { Metadata } from "next";
+
 import { Anton } from "next/font/google";
 import Footer from "@/components/footer";
 

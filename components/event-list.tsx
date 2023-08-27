@@ -1,4 +1,9 @@
 import { Events } from "@/lib/events";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 const EventList = () => {
   const events = Events.map((event) => ({
@@ -18,17 +23,17 @@ const EventList = () => {
           <div className="flex flex-row justify-between mt-3">
             <div className="flex-col ml-6">
               <h2 className="text-2xl md:text-4xl lg:text-4xl">{event.date}</h2>
-              <p className="text-sm">{event.month}</p>
+              <p className={`${inter.className} text-sm`}>{event.month}</p>
             </div>
             <div className="flex-col ml-9 mr-6">
               <h2 className="text-2xl md:text-4xl lg:text-4xl ">
                 {event.title}
               </h2>
-              <p className="text-sm">{event.location}</p>
+              <p className={`${inter.className} text-sm`}>{event.location}</p>
             </div>
           </div>
           <div className="flex flex-row justify-between items-center mx-6 pt-2 md:flex-col lg:flex-col lg:mr-4">
-            <p className="text-sm mb-2">{event.venue}</p>
+            <p className={`${inter.className} text-sm mb-2`}>{event.venue}</p>
             <span className="px-4 py-2 bg-menu ">Get your tickets</span>
           </div>
         </div>

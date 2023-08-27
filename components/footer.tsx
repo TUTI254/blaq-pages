@@ -1,10 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Separator } from "./ui/separator";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 const Footer = () => {
   return (
-    <footer className="mt-10">
+    <footer className={`mt-10 ${inter.className}`}>
       <Separator />
       <div className="flex flex-col space-y-6 ml-8 md:flex-row lg:flex-row md:justify-between lg:justify-between md:items-center lg:items-center">
         <Link href="/" className=" flex lg:ml-12 md:ml-12">
