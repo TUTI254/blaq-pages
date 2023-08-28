@@ -5,7 +5,10 @@ const SectionTwo = async () => {
   return (
     <>
       <Container>
-        <div className=" px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row lg:flex-row pt-2 md:items-center lg:items-center md:justify-end lg:justify-end">
+        <div className=" px-4 sm:px-6 lg:px-8 ml-2  flex flex-col-reverse md:flex-row lg:flex-row  md:justify-between lg:justify-between ">
+          <h2 className="uppercase  text-lg mt-3 lg:mt-0 md:mt-0 ">
+            Upcoming events
+          </h2>
           <SocialSection />
         </div>
       </Container>
