@@ -13,6 +13,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 const MainNav = () => {
   const pathname = usePathname();
@@ -43,7 +48,9 @@ const MainNav = () => {
         </SheetTrigger>
         <SheetContent className="bg-menu h-auto" side="top">
           <SheetHeader>
-            <SheetTitle className="text-left text-xs text-slate-50">
+            <SheetTitle
+              className={` ${inter.className} text-left text-xs text-white italic`}
+            >
               Menu
             </SheetTitle>
             <SheetDescription></SheetDescription>
@@ -58,7 +65,7 @@ const MainNav = () => {
                   "text-lg text-white uppercase transition-colors hover:underline hover:decoration-black hover:underline-offset-2 ",
                   route.active
                     ? "underline underline-offset-2 decoration-black"
-                    : ""
+                    : "no-underline"
                 )}
               >
                 {route.label}

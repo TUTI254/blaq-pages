@@ -16,6 +16,7 @@ const NewsLetter = async () => {
         />
         <span className="px-4 py-2 ml-2 bg-menu ">SUBSCRIBE</span>
       </div>
+      <div className="pt-12 border-b w-full border-gray-500 "></div>
     </>
   );
 };

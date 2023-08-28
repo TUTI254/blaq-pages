@@ -14,7 +14,7 @@ const EventList = () => {
     venue: event.venue,
   }));
   return (
-    <div className=" space-y-3">
+    <div className="space-y-5 lg:space-y-3 md:space-y-3">
       {events.map((event) => (
         <div
           key={event.date}

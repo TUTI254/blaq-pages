@@ -3,7 +3,7 @@ import Image from "next/image";
 const BannerImage = async () => {
   return (
     <>
-      <div className="static flex justify-center items-center">
+      <div className=" flex justify-center items-center">
         <Image
           src="/hero.svg"
           alt="banner"

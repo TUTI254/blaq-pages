@@ -10,10 +10,9 @@ const inter = Inter({
 const Footer = () => {
   return (
     <footer className={`mt-10 ${inter.className}`}>
-      <Separator />
       <div className="flex flex-col space-y-6 ml-8 md:flex-row lg:flex-row md:justify-between lg:justify-between md:items-center lg:items-center">
         <Link href="/" className=" flex lg:ml-12 md:ml-12">
-          <Image src="/logo.svg" width="100" height="100" alt="logo" priority />
+          <Image src="/logo.svg" width="70" height="70" alt="logo" priority />
         </Link>
 
         <div className="flex-col">
